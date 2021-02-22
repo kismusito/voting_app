@@ -9,4 +9,4 @@ npm start
 
 ## Preview
 
-![preview](https://prnt.sc/103czjl)
+![preview](https://github.com/kismusito/voting_app/blob/master/public/assets/preview_app.png?raw=true)
