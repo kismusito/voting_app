@@ -1,4 +1,4 @@
-# Voting app API Front-end
+# Voting app Front-end
 
 ## Usage
 
@@ -6,6 +6,16 @@
 npm install
 npm start
 ```
+
+### Used tools
+<ol>
+    <ul>React</ul>
+    <ul>Typescript</ul>
+    <ul>Redux</ul>
+    <ul>Axios</ul>
+    <ul>Styled Components</ul>
+    <ul>Material UI</ul>
+</ol>
 
 ## Preview
 
