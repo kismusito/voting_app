@@ -28,13 +28,17 @@ export const candidateReducer = (
         case GETCANDIDATES_SUCCESS:
             let candidatesInState: Candidate[] = state.candidates || [];
 
+            // If user is voted we need execute a special props to update votes of certain user
             if (action.update) {
                 candidatesInState = candidatesInState.map((candidate) => {
                     if (candidate.id === action.idUpdated) {
+                        // Validate if action votes is not null
                         candidate.votes =
                             typeof action.votes === "number"
                                 ? action.votes
                                 : candidate.votes;
+                        
+                        // Validate if updated is not null, this is because i have a conflet because the reducer only acceps an array of candidades and props return only one
                         candidate.update_at =
                             action.updatedAt || candidate.update_at;
                     }

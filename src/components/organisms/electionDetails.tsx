@@ -15,13 +15,18 @@ export function ElectionDetails(props: ElectionDetailsProps) {
     ] = useState<Candidate>();
 
     useEffect(() => {
+        // Obtain all votes every candidades state changes
         let totalVotes = 0;
         for (let i in props.candidates) {
             totalVotes += props.candidates[i].votes;
         }
         setTotalVotes(totalVotes);
 
+        
+
+        // Reorder candidates list, this obtains the last updated candidate and we use the index 0 for identify it
         const candidates = [...props.candidates];
+
         const sortByDate = candidates.sort((a, b) => {
             const dateA = new Date(a.update_at);
             const dateB = new Date(b.update_at);

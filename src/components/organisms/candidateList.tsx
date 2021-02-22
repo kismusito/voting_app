@@ -8,7 +8,6 @@ interface CandidateListProps {
 }
 
 export function CandidateList(props: CandidateListProps) {
-    // const [candidates, setCandidates] = useState<Candidate[]>([]);
     const [candidates, setCandidates] = useState<Candidate[]>([]);
 
     // Sort by votes, first render

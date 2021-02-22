@@ -40,6 +40,12 @@ export const setVote = (candidateID: number, voteAction: symbols) => async (
         .setVote(candidateID, voteAction)
         .then((res) => {
             if (res.status) {
+                /**
+                 * votes - cuantity of votes updated
+                 * updatedAt - date of candidate was updated
+                 * idUpdated - For search the user to update
+                 * update - In reducer we evalue if is first render or is update
+                 */
                 dispatch({
                     type: GETCANDIDATES_SUCCESS,
                     update: true,

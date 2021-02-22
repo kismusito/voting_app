@@ -12,8 +12,6 @@ async function getCandidates() {
     return request.data;
 }
 
-
-
 async function setVote(candidateID: number, symbol: symbols) {
     const request = await axios.put(
         environmentVars.API_URL + "api/candidate/setVote",
